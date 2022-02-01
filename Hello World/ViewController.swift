@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var funText: UITextField!
    
     @IBOutlet weak var band: UILabel!
+    
+    let favoriteBand = "Toby Fox"
+    
     override func viewDidLoad() {
        
         super.viewDidLoad()
@@ -36,8 +39,14 @@ class ViewController: UIViewController {
         string: "What Fun",
     attributes: [NSAttributedString.Key.foregroundColor: UIColor.black] )
             
+        band.text = favoriteBand
             
-            
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+           label.center = CGPoint(x: 160, y: 415)
+           label.textAlignment = .center
+           label.text = "Toby Fox has 1 member"
+
+           self.view.addSubview(label)
             
             }
 }
